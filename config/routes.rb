@@ -1,5 +1,16 @@
 Provemail::Application.routes.draw do
-  resources :articles
+  
+  resources :comments, only: [:new, :edit, :show, :create]
+
+  #get "comments/new"
+  #get "comments/show"
+  #get "comments/edit"
+  get 'my_new_comment', to: 'comments#new'
+  #post 'my_new_comment', to: 'comments#create'
+  
+  #match 'my_new_comment' => 'comments#new', :via => [:get, :post]
+
+ resources :articles
   
  match 'new_article' => 'articles#new', :via => [:get, :post]
 

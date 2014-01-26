@@ -1,0 +1,46 @@
+<h1>Comments#new</h1>
+<!--
+<%#= form_for (@comment) do |t| %>
+
+<%#= t.text_area :content %>
+
+<%#= t.submit 'Submit' %>
+
+<%# end %>
+-->
+
+<!--
+<form> 
+
+<input type='text' name="ciao">
+
+<input type='submit' >
+
+
+</form>
+-->
+
+<!--
+<form method="post" action="/my_new_comment">
+
+<input type='text' name="ciao" >
+
+<input type='submit' >
+
+</form>
+-->
+
+<%#= form_tag '/my_new_comment' do %>
+
+	<%#= text_field_tag 'ciao' %>
+        <%#= submit_tag 'Go!' %>
+	
+<%# end %>
+
+<%= form_for (@comment) do |c| %>
+
+<%= c.text_area :content %>
+<%= c.submit 'Go Go!' %>
+<% end %>
+
+<p>Find me in app/views/comments/new.html.erb</p>
